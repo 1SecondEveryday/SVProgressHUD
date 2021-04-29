@@ -5,7 +5,7 @@
 //  Copyright (c) 2014-2018 Guillaume Campagna. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface SVIndefiniteAnimatedView : UIView
 

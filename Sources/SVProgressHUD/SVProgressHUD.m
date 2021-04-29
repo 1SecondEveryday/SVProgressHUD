@@ -9,6 +9,8 @@
 #error SVProgressHUD is ARC only. Either turn on ARC for the project or use -fobjc-arc flag
 #endif
 
+@import UIKit;
+
 #import "SVProgressHUD.h"
 #import "SVIndefiniteAnimatedView.h"
 #import "SVProgressAnimatedView.h"
@@ -400,13 +402,9 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
         _imageViewSize = CGSizeMake(28.0f, 28.0f);
         _shouldTintImages = YES;
         
-        NSBundle *bundle = [NSBundle bundleForClass:[SVProgressHUD class]];
-        NSURL *url = [bundle URLForResource:@"SVProgressHUD" withExtension:@"bundle"];
-        NSBundle *imageBundle = [NSBundle bundleWithURL:url];
-        
-        _infoImage = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"info" ofType:@"png"]];
-        _successImage = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"success" ofType:@"png"]];
-        _errorImage = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"error" ofType:@"png"]];
+        _infoImage = [UIImage imageNamed:@"info" inBundle:SWIFTPM_MODULE_BUNDLE withConfiguration:nil];
+        _successImage = [UIImage imageNamed:@"success" inBundle:SWIFTPM_MODULE_BUNDLE withConfiguration:nil];
+        _errorImage = [UIImage imageNamed:@"error" inBundle:SWIFTPM_MODULE_BUNDLE withConfiguration:nil];
 
         _ringThickness = 2.0f;
         _ringRadius = 18.0f;

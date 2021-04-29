@@ -5,6 +5,8 @@
 //  Copyright (c) 2014-2018 Tobias Tiemerding. All rights reserved.
 //
 
+@import UIKit;
+
 #import "SVRadialGradientLayer.h"
 
 @implementation SVRadialGradientLayer

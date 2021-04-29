@@ -5,7 +5,7 @@
 //  Copyright (c) 2011-2018 Sam Vermette and contributors. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 #import <AvailabilityMacros.h>
 
 extern NSString * _Nonnull const SVProgressHUDDidReceiveTouchEventNotification;
